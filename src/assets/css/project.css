@@ -29,7 +29,7 @@
 
 .project-middle img, .project-middle video {
   margin: auto;
-  max-width: 680px;
+  max-width: 600px;
   width: 48vw;
   height: auto;
   -ms-grid-row: 1;
