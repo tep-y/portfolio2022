@@ -1,0 +1,67 @@
+main {
+  width: 100%;
+  height: calc(100vh - 18vh);
+  overflow-x: scroll;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.projects {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  position: relative;
+  text-align: center;
+  padding: 6.25rem;
+  width: 100%;
+  height: calc(100vh - 18vh);
+  scroll-snap-align: start;
+}
+
+section.projects .link-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #f44336;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 100;
+  background-color: none;
+  -webkit-transition: background-color 400ms;
+  transition: background-color 400ms;
+}
+
+section.projects .link-title:hover {
+  color: #F7F7F7;
+  background-color: #f44336;
+}
+
+section.projects img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 700px;
+  height: 460px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.5;
+}
+
+@media all and (max-width: 649px) {
+  section.projects img {
+    width: 76% !important;
+    height: auto;
+  }
+}
+
+@media all and (min-width: 650px) and (max-width: 959px) {
+  section.projects img {
+    width: 76% !important;
+  }
+}
+/*# sourceMappingURL=projects.css.map */

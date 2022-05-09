@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@font-face {
+  font-family: 'Maragsa';
+  src: url("../fonts/maragsa-display.woff") format("woff");
+}
+
+*, body {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 10px;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0px;
+  height: 0px;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -ms-flex-direction: column;
+}
+
+header {
+  padding: 28px 0;
+  text-align: center;
+  height: 120px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a .home-link {
+  color: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+.link-main h3 {
+  color: black;
+  background: none;
+  -webkit-transition: background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
+}
+
+.link-main h3:hover {
+  color: black;
+  background-color: #F7F7F7;
+}
+
+h2 {
+  font-size: 15.4em;
+  font-family: 'Maragsa', 'Poppins', sans-serif;
+}
+
+h3 {
+  font-size: 4.8em;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+
+h4 {
+  font-size: 2.5em;
+  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.4em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  height: calc(100vh - 42vh);
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: 100vw;
+  padding-top: 40px;
+}
+
+footer .tag-description {
+  position: relative;
+  width: 472px;
+  padding: 28px;
+}
+
+@media all and (max-width: 649px) {
+  body {
+    width: auto;
+    margin: 0;
+  }
+  h2 {
+    font-size: 8em;
+    font-family: 'Maragsa', 'Poppins', sans-serif;
+  }
+  h3 {
+    font-size: 2.4em;
+  }
+  p {
+    font-size: 1.6em;
+  }
+  footer .tag-description {
+    width: 264px;
+  }
+  nav .left {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media all and (min-width: 650px) and (max-width: 959px) {
+  h2 {
+    font-size: 12em;
+    font-family: 'Maragsa', 'Poppins', sans-serif;
+  }
+  h3 {
+    font-size: 3em;
+  }
+  p {
+    font-size: 2em;
+  }
+  footer .tag-description {
+    width: 316px;
+  }
+  nav .left {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/*# sourceMappingURL=main.css.map */

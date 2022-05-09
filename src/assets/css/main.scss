@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@font-face {
+  font-family: 'Maragsa';
+  src: url('../fonts/maragsa-display.woff')  format('woff');
+}
+
+$turquoise: #DFF8EB;
+$grey: #F7F7F7;
+$redburn: #f44336;
+$orange: #EF946C;
+
+*, body {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0px;
+  height: 0px;
+}
+
+
+.wrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  -ms-flex-direction: column;
+}
+
+
+// HEADER
+header {
+  padding: 28px 0;
+  text-align: center;
+  height: 120px;
+}
+
+a {
+  text-decoration: none;
+
+  .home-link {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+// NAVIGATION
+.link-main h3 {
+  color: black;
+  background: none;
+  transition: background-color .3s ease-in-out;
+}
+
+.link-main h3:hover {
+  color: black;
+  background-color: $grey;
+}
+
+// FONT
+h2 {
+  // PROJECT TITLE
+  font-size: 15.4em;
+  font-family: 'Maragsa', 'Poppins', sans-serif;
+}
+
+h3 {
+  // MAIN TITLES
+  font-size: 4.8em;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+
+h4 {
+  font-size: 2.5em;
+  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.4em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav {
+  flex: 1;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  height: calc(100vh - 42vh);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+// FOOTER
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: 100vw;
+  padding-top: 40px;
+
+  .tag-description {
+    position: relative;
+    width: 472px;
+    padding: 28px;
+  }
+}
+
+// RESPONSIVENESS
+@media all and (max-width: 649px) {
+  body {
+    width: auto;
+    margin: 0;
+  }
+
+  h2 {
+    // PROJECT TITLE
+    font-size: 8em;
+    font-family: 'Maragsa', 'Poppins', sans-serif;
+  }
+
+  h3 {
+    font-size: 2.4em;
+  }
+
+  p {
+    font-size: 1.6em;
+  }
+
+  footer {
+    .tag-description {
+      width: 264px;
+    }
+  }
+
+  nav .left {
+    justify-content: left;
+    align-items: center;
+  }
+}
+
+@media all and (min-width: 650px) and (max-width: 959px) {
+  h2 {
+    // PROJECT TITLE
+    font-size: 12em;
+    font-family: 'Maragsa', 'Poppins', sans-serif;
+  }
+
+  h3 {
+    font-size: 3em;
+  }
+
+  p {
+    font-size: 2em;
+  }
+
+  footer {
+    .tag-description {
+      width: 316px;
+    }
+  }
+
+  nav .left {
+    justify-content: left;
+    align-items: center;
+  }
+}

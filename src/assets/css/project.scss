@@ -1,0 +1,135 @@
+// PROJECT
+
+$turquoise: red;
+$grey: #F7F7F7;
+$redburn: #f44336;
+
+.project-title {
+  text-align: center;
+  padding-top: 30vh;
+  height: auto;
+  h1 {
+    font-size: 8em;
+    font-family: 'Maragsa', 'Poppins', sans-serif;
+  }
+
+  img {
+    width: 76%;
+    max-width: 1000px;
+  }
+}
+
+.project-middle {
+  display: grid;
+  gap: 4em;
+  grid-template-areas: "content text";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 84px 36px 84px 36px;
+  z-index: 4;
+
+  img, video {
+    margin: auto;
+    max-width: 680px;
+    width: 48vw;
+    height: auto;
+    grid-area: content;
+  }
+
+  p {
+    margin: auto;
+    grid-area: text;
+    z-index: 3;
+  }
+}
+
+.project-last {
+  p:first-of-type {
+    padding: 0 8vw 4vh 8vw;
+    text-align: center;
+  }
+
+  p:last-of-type {
+    padding-bottom: 18vh;
+    text-align: center;
+  }
+
+  .project-link {
+    text-decoration: none;
+    color: $redburn;
+    transition: background-color 400ms;
+    font-size: 1em;
+  }
+  
+  .project-link:hover {
+    background-color: $redburn;
+    color: white;
+  }
+}
+
+.project-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    margin: 20px;
+    width: 32vw;
+    max-width: 500px;
+  }
+}
+
+.footer-project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 40px;
+
+  a {
+    text-decoration: none;
+    color: $redburn;
+    transition: background-color 400ms;
+  }
+
+  a:hover {
+    background-color: $redburn;
+    color: white;
+  }
+}
+
+@media all and (max-width: 649px) {
+  // PROJECT PAGE
+  .project-middle {
+    display: grid;
+    gap: 4em;
+    grid-template-areas: 
+    "content"
+    "text" !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 2fr !important;
+    padding: 84px 36px 84px 36px;
+
+    img, video {
+      grid-area: content;
+    }
+
+    p {
+      grid-area: text;
+    }
+  }
+
+  .project-middle {
+    img, video {
+      width: 260px !important;
+    }
+  }
+
+  .project-images {
+    display: grid !important;
+
+    img {
+      width: 260px !important;
+    }
+  }
+}
