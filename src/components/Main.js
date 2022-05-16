@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+// import { motion } from 'framer-motion';
 import Header from './Header';
 import Footer from './Footer';
-// import Navigation from './Navigation';
 
 const Main = ({backgroundColor}) => {
   useEffect(() => {

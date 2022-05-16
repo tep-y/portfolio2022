@@ -38,15 +38,21 @@ section.projects {
     background-color: $redburn;
   }
 
-  img {
+  .project-image {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 700px;
+    overflow: hidden;
+  }
+
+  img {
+    width: 700px;
     height: 460px;
-    object-fit: cover;
     opacity: 0.5;
+    overflow: hidden;
+    object-fit: cover;
   }
 }
 @media all and (max-width: 649px) {

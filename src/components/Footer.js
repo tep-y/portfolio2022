@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
   return(
     <footer>
-      <div className="tag-description">
+      <motion.div initial={{y: 50, opacity: 0}} animate={{y: 0, opacity: 1}} className="tag-description">
         <h3>Graphic Design & Web Developer</h3>
-      </div>
+      </motion.div>
     </footer>
   )
 }
