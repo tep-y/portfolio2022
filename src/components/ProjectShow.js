@@ -11,8 +11,7 @@ const ProjectShow = () => {
   const capTitle = title.charAt(0).toUpperCase() + title.slice(1);
 
   return(
-    <div>
-      <Header />
+    <>
       { item ? ( 
         <>
       <div className='project-title'>
@@ -73,7 +72,7 @@ const ProjectShow = () => {
       <div className='footer-project'>
             <Link to='/projects'><p>Back to all projects</p></Link>
       </div>
-    </div>
+    </>
   )
 };
 

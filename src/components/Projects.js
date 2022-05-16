@@ -14,30 +14,27 @@ const Projects = ({backgroundColor}) => {
   }, []);
 
   return(
-    <div>
-      <Header />
-      <main>
-        { elements && elements.map(element => {
-          return(
-            <section className='projects' key={element.id}>
-              <Link to={`/projects/${element.title}`} className='link-title' >
-                <h2>{element.title}</h2>
+    <main>
+      { elements && elements.map(element => {
+        return(
+          <section className='projects' key={element.id}>
+            <Link to={`/projects/${element.title}`} className='link-title' >
+              <h2>{element.title}</h2>
+            </Link>
+            <div className='project-image'>
+            <Link to={`/projects/${element.title}`} >
+              <motion.img 
+                whileHover={{ scale: 1.08 }}
+                trasition={transition} 
+                src={element.image001}
+                alt={element.tile} 
+                />
               </Link>
-              <div className='project-image'>
-              <Link to={`/projects/${element.title}`} >
-                <motion.img 
-                  whileHover={{ scale: 1.08 }}
-                  trasition={transition} 
-                  src={element.image001}
-                  alt={element.tile} 
-                  />
-               </Link>
-              </div>
-            </section>
-          )
-        })}
-      </main>
-    </div>
+            </div>
+          </section>
+        )
+      })}
+    </main>
   )
 };
 

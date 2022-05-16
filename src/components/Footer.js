@@ -1,14 +1,45 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
+  const containerVariants = {
+    hidden: {
+      y: 50,
+      opacity: 0
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: .5,
+        duration: .6,
+        backgroundColor: ["#fd3", "#60f", "#fd3"]
+      }
+    },
+    exit: {
+      y: 100,
+      opacity: 0,
+      transition: {
+        ease: 'easeInOut',
+        delay: 0.3
+      }
+    }
+  }
+
   return(
     <footer>
-      <motion.div initial={{y: 50, opacity: 0}} animate={{y: 0, opacity: 1}} className="tag-description">
+      <motion.div 
+        className="tag-description"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
         <h3>Graphic Design & Web Developer</h3>
       </motion.div>
-    </footer>
+    </footer> 
   )
 }
 
 export default Footer;
+

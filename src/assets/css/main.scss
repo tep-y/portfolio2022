@@ -29,6 +29,10 @@ $orange: #EF946C;
   -ms-flex-direction: column;
 }
 
+.top-container{
+  border: red solid 2px;
+  height: 80vh;
+}
 
 // HEADER
 header {
@@ -115,7 +119,6 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
-  right: 0;
   height: auto;
   width: 100vw;
   padding-top: 40px;

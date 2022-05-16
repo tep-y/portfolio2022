@@ -11,7 +11,6 @@ const Info = ({backgroundColor}) => {
 
   return(
     <>
-      <Header />
       <div className='container-info'>
         <section className='info'>
           <div className='row'>
