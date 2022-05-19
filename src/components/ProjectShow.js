@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import '../assets/css/project.css';
 import elements from '../db.json';
-import Header from './Header';
 
 const ProjectShow = () => {
   const { project } = useParams();
@@ -10,12 +10,31 @@ const ProjectShow = () => {
   const title = item.title;
   const capTitle = title.charAt(0).toUpperCase() + title.slice(1);
 
+  const titleVariants = {
+    initial: {
+      color: '#f44336',
+      y: '-80vw',
+    },
+    visible: {
+      color: '#000',
+      y: 0,
+      transition: {
+        duration: 1
+      }
+    }
+  }
+
   return(
     <>
       { item ? ( 
         <>
       <div className='project-title'>
-        <h2>{title}</h2>
+        <motion.h2
+          variants={titleVariants}
+          initial='initial'
+          animate='visible'
+        >{title}
+        </motion.h2>
         <img src={`../${item.image001}`} />
       </div>
       <div className='project-middle'>

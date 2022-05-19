@@ -34,11 +34,6 @@ section.projects .link-title {
   transition: background-color 400ms;
 }
 
-section.projects .link-title:hover {
-  color: #F7F7F7;
-  background-color: #f44336;
-}
-
 section.projects .project-image {
   position: absolute;
   top: 50%;
@@ -60,7 +55,7 @@ section.projects img {
 
 @media all and (max-width: 649px) {
   section.projects img {
-    width: 76% !important;
+    width: 56% !important;
     height: auto;
   }
 }
@@ -68,6 +63,7 @@ section.projects img {
 @media all and (min-width: 650px) and (max-width: 959px) {
   section.projects img {
     width: 76% !important;
+    height: auto;
   }
 }
 /*# sourceMappingURL=projects.css.map */
