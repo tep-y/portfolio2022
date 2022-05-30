@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import '../assets/css/project.css';
 import elements from '../db.json';
 
@@ -10,16 +11,62 @@ const ProjectShow = () => {
   const title = item.title;
   const capTitle = title.charAt(0).toUpperCase() + title.slice(1);
 
-  const titleVariants = {
-    initial: {
-      color: '#f44336',
-      y: '-80vw',
+  const [ ref, inView ] = useInView();
+  const [ ref2, inView2 ] = useInView();
+  const animation = useAnimation();
+  const animation2 = useAnimation();
+
+  useEffect(() => {
+    if(inView) {
+      animation.start({
+        opacity: 1,
+        x: 0,
+        transition: {
+          ease: [0.6, 0.01, -0.05, 0.95],
+          duration: 1.6,
+          delay: 0.3
+        }
+      })
+    }
+    if (!inView) {
+      animation.start({
+        x: '100vw',
+        opacity: 0
+      })
+    }
+  }, [inView]);
+
+  useEffect(() => {
+    if(inView2) {
+      animation2.start({
+        opacity: 1,
+        x: 0,
+        transition: {
+          ease: [0.6, 0.01, -0.05, 0.95],
+          duration: 1.6,
+          delay: 0.3
+        }
+      })
+    }
+    if (!inView2) {
+      animation2.start({
+        x: '-100vw',
+        opacity: 0
+      })
+    }
+  }, [inView2]);
+
+  const mainVariants = {
+    hidden: {
+      y: 200,
+      opacity: 0
     },
     visible: {
-      color: '#000',
+      opacity: 1,
       y: 0,
       transition: {
-        duration: 1
+        ease: [0.6, 0.01, -0.05, 0.95],
+        duration: 1.6
       }
     }
   }
@@ -28,16 +75,25 @@ const ProjectShow = () => {
     <>
       { item ? ( 
         <>
-      <div className='project-title'>
-        <motion.h2
-          variants={titleVariants}
-          initial='initial'
-          animate='visible'
-        >{title}
-        </motion.h2>
-        <img src={`../${item.image001}`} />
-      </div>
-      <div className='project-middle'>
+      <motion.div 
+        className='project-title'
+        variants={mainVariants}
+        initial='hidden'
+        animate='visible'
+      >
+        <h2>
+          {title}
+        </h2>
+        <img 
+          src={`../${item.image001}`}
+        />
+      </motion.div>
+      <motion.div 
+        className='project-middle'
+        ref={ref}
+        animate={animation}
+        exit={{opacity: 0, transition: {delay: 0.8}}}
+      >
         { !item.image002 ? <></>
         : <>
           { item.image002.includes('.mp4')
@@ -57,8 +113,12 @@ const ProjectShow = () => {
           </>
         }
         <p>{`${item.description}`}</p>
-      </div>
-      <div className='project-last'>
+      </motion.div>
+      <motion.div 
+        className='project-last' 
+        ref={ref2} animate={animation2} 
+        exit={{opacity: 0, transition: {delay: 0.8}}}
+      >
         <div className='project-images'>
           { item.image003 ? (
             <img src={`../${item.image003}`} />
@@ -84,10 +144,10 @@ const ProjectShow = () => {
           }
           </>
         }
-      </div>
+      </motion.div>
       </>
       )
-      : <div style={{textAlign: 'center'}}>No project to see here. Try again :)</div>}
+      : <div style={{textAlign: 'center'}}><h3>No project to see here. Try again :)</h3></div>}
       <div className='footer-project'>
             <Link to='/projects'><p>Back to all projects</p></Link>
       </div>

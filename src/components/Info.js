@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Header from './Header';
+import { motion } from 'framer-motion';
 import Footer from './Footer';
 import '../assets/css/info.css';
 
@@ -9,9 +9,33 @@ const Info = ({backgroundColor}) => {
     bodyElm.style.backgroundColor = backgroundColor;
   }, []);
 
+  const containerVariants = {
+    hidden: {
+      opacity: 0
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.6
+      }
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        delay: 0.6
+      }
+    }
+  }
+
   return(
     <>
-      <div className='container-info'>
+      <motion.div 
+        className='container-info'
+        variants={containerVariants} 
+        initial='hidden' 
+        animate='visible' 
+        exit='exit'  
+      >
         <section className='info'>
           <div className='row'>
             <div className="column center">
@@ -65,7 +89,7 @@ const Info = ({backgroundColor}) => {
             </div>
           </div>
         </section>
-      </div>
+      </motion.div>
       <Footer />
     </>
   )

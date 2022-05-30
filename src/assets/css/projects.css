@@ -55,7 +55,7 @@ section.projects img {
 
 @media all and (max-width: 649px) {
   section.projects img {
-    width: 56% !important;
+    width: 44% !important;
     height: auto;
   }
 }

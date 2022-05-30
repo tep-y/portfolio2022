@@ -32,11 +32,6 @@ section.projects {
     background-color: none;
     transition: background-color 400ms;
   }
-  
-  .link-title:hover {
-    // color: $grey;
-    // background-color: $redburn;
-  }
 
   .project-image {
     position: absolute;
@@ -58,7 +53,7 @@ section.projects {
 @media all and (max-width: 649px) {
   // PROJECTS
   section.projects img {
-    width: 56% !important;
+    width: 44% !important;
     height: auto;
   }
 }

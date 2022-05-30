@@ -12,48 +12,53 @@ const Projects = ({backgroundColor}) => {
 
   const [loading, setLoading] = useState(true);
 
-  const containerVariants = {
-    hidden: {
-      opacity: 0
-    },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        delay: 1,
-        duration: 0.5,
-        type: 'tween',
-        ease: 'easeIn',
-        when: 'beforeChildren'
-      }
-    }
-  }
-
   const imageVariants = { 
     hidden: {
-      scale: 1
+      scale: 1,
+      opacity: 0,
+      y: 200
     },
     hover: {
       scale: 1.08
     },
+    visible: {
+      opacity: 0.5,
+      y: 0,
+      transition: {
+        ease: [0.6, 0.01, -0.05, 0.95],
+        duration: 1.6
+      }
+    },
     exit: {
       opacity: 0,
+      y: 200,
       transition: {
-        ease: 'easeInOut',
-        delay: 0.6,
-        duration: 1
+        ease: [0.6, 0.01, -0.05, 0.95],
+        duration: 1.6
       }
     }
   };
 
 const titleVariants = { 
-  exit: {
-    y: '80vw',
+  hidden: {
+    scale: 1,
     opacity: 0,
-  transition: {
-    delay: 0.8,
-    duration: 1,
-    ease: 'easeOut'
+    y: 400
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1.6
+    }
+  },
+  exit: {
+    opacity: 0,
+    y: 400,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1.6
     }
   }
 };
@@ -103,18 +108,15 @@ const titleVariants = {
         >
         </motion.div>
       </div>
-      <motion.main 
-        variants={containerVariants} 
-        initial='hidden' 
-        animate='visible' 
-        exit='exit'
-      >
+      <main>
         { elements && elements.map(element => {
           return(
             <section className='projects' key={element.id} style={{display: loading ? 'none' : 'block'}}>
               <Link to={`/projects/${element.title}`} className='link-title' >
                 <motion.h2
                   variants={titleVariants}
+                  initial='hidden'
+                  animate='visible'
                   exit='exit'
                 >
                   {element.title}
@@ -137,7 +139,7 @@ const titleVariants = {
             </section>
           )
         })}
-      </motion.main>
+      </main>
     </>
   )
 };
