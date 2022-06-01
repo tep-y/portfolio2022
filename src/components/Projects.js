@@ -70,7 +70,8 @@ const titleVariants = {
     visible: {
       opacity: [0, 1],
       transition: {
-        yoyo: 8,
+        repeat: 8,
+        repeatType: 'reverse',
         delay: 1,
         duration: 1.6,
         ease: 'easeInOut'

@@ -64,7 +64,7 @@ const Info = ({backgroundColor}) => {
             <div className='column left'>
               <div className='container-other'>
                 <div className='change-other'>
-                  <h4 class="other-likes">Dogs, hockey, and potatoes</h4>
+                  <h4 className="other-likes">Dogs, hockey, and potatoes</h4>
                 </div>
               </div>
             </div>
