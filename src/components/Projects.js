@@ -5,12 +5,21 @@ import elements from '../db.json';
 import { Link } from 'react-router-dom';
 
 const Projects = ({backgroundColor}) => {
+  const [loading, setLoading] = useState(true);
+  const [scrollarrow, setScrollarrow] = useState(true);
+
   useEffect(() => {
     const bodyElm = document.querySelector('body');
     bodyElm.style.backgroundColor = backgroundColor;
-  }, []);
 
-  const [loading, setLoading] = useState(true);
+    const timer = setTimeout(() => {
+      setScrollarrow(false);
+    }, 5000);
+
+    return () => clearTimeout(timer)
+
+  }, [5000]);
+
 
   const imageVariants = { 
     hidden: {
@@ -39,29 +48,29 @@ const Projects = ({backgroundColor}) => {
     }
   };
 
-const titleVariants = { 
-  hidden: {
-    scale: 1,
-    opacity: 0,
-    y: 400
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      ease: [0.6, 0.01, -0.05, 0.95],
-      duration: 1.6
+  const titleVariants = { 
+    hidden: {
+      scale: 1,
+      opacity: 0,
+      y: 400
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: [0.6, 0.01, -0.05, 0.95],
+        duration: 1.6
+      }
+    },
+    exit: {
+      opacity: 0,
+      y: 400,
+      transition: {
+        ease: [0.6, 0.01, -0.05, 0.95],
+        duration: 1.6
+      }
     }
-  },
-  exit: {
-    opacity: 0,
-    y: 400,
-    transition: {
-      ease: [0.6, 0.01, -0.05, 0.95],
-      duration: 1.6
-    }
-  }
-};
+  };
 
   const loaderVariants = {
     hidden: {
@@ -78,6 +87,7 @@ const titleVariants = {
       }
     }
   }
+
   const spinnerVariants = {
     hidden: {
       opacity: 0
@@ -89,6 +99,28 @@ const titleVariants = {
         duration: .6
       }
     }
+  }
+
+  const scrollarrowVariants = {
+    hidden: {
+      opacity: 0
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        ease: 'easeIn',
+        duration: 1,
+        delay: 1
+      }
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        ease: 'easeOut',
+        duration: 0.8
+      }
+    }
+
   }
 
   return(
@@ -109,6 +141,15 @@ const titleVariants = {
         >
         </motion.div>
       </div>
+      <motion.div 
+        className={`scroll-arrow ${scrollarrow ? 'scroll-show' : 'scroll-hidden'}`}
+        variants={scrollarrowVariants}
+        initial='hidden'
+        animate='visible'
+        exit='exit'
+      >
+        <img src='/images/scrollarrow.webp' alt='scroll arrow' />
+      </motion.div>
       <main>
         { elements && elements.map(element => {
           return(

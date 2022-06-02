@@ -5,6 +5,37 @@ $grey: #F7F7F7;
 $redburn: #f44336;
 $orange: #EF946C;
 
+.scroll-arrow {
+  img {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+  }
+}
+
+.scroll-show {
+  opacity: 1;
+}
+
+.scroll-hidden {
+  -webkit-animation: fadeout .5s linear forwards;
+  animation: fadeout .5s linear forwards;
+}
+  
+@-webkit-keyframes fadeout {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+  
+@keyframes fadeout {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 main {
   width: 100%;
   height: calc(100vh - 18vh);
