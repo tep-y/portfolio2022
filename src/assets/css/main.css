@@ -171,7 +171,7 @@ footer {
 
 footer .tag-description {
   position: relative;
-  width: 472px;
+  width: 482px;
   padding: 28px;
 }
 
@@ -191,7 +191,7 @@ footer .tag-description {
     font-size: 1.6em;
   }
   footer .tag-description {
-    width: 264px;
+    width: 284px;
   }
   nav .left {
     -webkit-box-pack: left;
@@ -215,7 +215,7 @@ footer .tag-description {
     font-size: 2em;
   }
   footer .tag-description {
-    width: 316px;
+    width: 326px;
   }
   nav .left {
     -webkit-box-pack: left;
