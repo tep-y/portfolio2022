@@ -1,5 +1,6 @@
 //INFO
 $fontSize: 4.8em;
+$redburn: #f44336;
 
 .container-info {
   width: 100%;
@@ -9,12 +10,15 @@ $fontSize: 4.8em;
 
   h3 {
     font-size: 6.4em;
-    font-family: 'Maragsa', 'Poppins", sans-serif';
+    font-family: 'Maragsa', 'Poppins', 'sans-serif';
   }
 }
 
 section.info {
-  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
   width: 100%;
   height: calc(100vh - 42vh);
   scroll-snap-align: start;
@@ -24,11 +28,65 @@ section.info {
   font-size: $fontSize;
 }
 
-.carousel {
+.marquee {
   position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: left;
+  overflow: hidden;
+  width: 100vw;
+  --offset: 25vw;
+  --move-initial: calc(-25% + var(--offset));
+  --move-final: calc(-50% + var(--offset));
+}
+
+.marquee-inner {
+  width: fit-content;
+  display: flex;
+  position: relative;
+  transform: translate3d(var(--move-initial), 0, 0);
+  animation: marquee 10s linear infinite;
+  color: #f44336;
+}
+
+.marquee span {
+  white-space: nowrap;
+  color: $redburn;
+  font-size: 6vw;
+  padding: 0 2vw;
+  text-align: center;
+  font-family: 'Maragsa', 'Poppins', 'sans-serif';
+}
+
+.marquee span .info-subject {
+  color: #000;
+}
+
+.other-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// .marquee {
+//   color: #000000;
+//   font-size: 6.4em;
+//   font-family: 'Maragsa', 'Poppins', 'sans-serif';
+//   animation: rightToLeft2 5s linear infinite;
+// }
+
+// .marquee:before {
+//   color: #f44336;
+//   text-decoration: underline;
+//   content: "Skills";
+//   font-family: 'Maragsa', 'sans-serif';
+// }
+
+@keyframes marquee {
+  0% {
+      transform: translate3d(var(--move-initial), 0, 0);
+  }
+
+  100% {
+      transform: translate3d(var(--move-final), 0, 0);
+  }
 }
 
 .change-outer {
@@ -73,14 +131,15 @@ section.info {
   }
 }
 
-.icons a:not(:first-child) {
-  margin-left: 8vw;
-}
+// .icons a:not(:first-child) {
+//   margin-left: 8vw;
+// }
 
 i {
   font-size: 6.4em;
   text-decoration: none;
-  background: -webkit-gradient(linear, right top, left bottom, from(#141E30), to(#243B55));
+  padding-left: 0.7em;
+  background: $redburn;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
