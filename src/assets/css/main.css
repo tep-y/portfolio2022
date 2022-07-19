@@ -71,6 +71,10 @@ header {
   height: 120px;
 }
 
+.landscape-title {
+  display: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -180,6 +184,11 @@ footer .tag-description {
     width: auto;
     margin: 0;
   }
+  header {
+    padding: 28px 0;
+    text-align: center;
+    height: auto;
+  }
   h2 {
     font-size: 8em;
     font-family: 'Maragsa', 'Poppins', sans-serif;
@@ -224,6 +233,15 @@ footer .tag-description {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+@media all and (max-width: 900px) and (orientation: landscape) {
+  .landscape-title {
+    display: block;
+  }
+  footer {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */

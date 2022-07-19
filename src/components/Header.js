@@ -29,6 +29,7 @@ const Header = () => {
           exit={{ opacity: 0, transition: { delay: 10 } }}
         >
           Hello! My name is Tep.
+          <span><p className='landscape-title'>Web Developer & Graphic Designer</p></span>
         </motion.h3>
       </Link>
     </header>

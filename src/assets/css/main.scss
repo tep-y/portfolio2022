@@ -61,6 +61,10 @@ header {
   height: 120px;
 }
 
+.landscape-title {
+  display: none;
+}
+
 a {
   text-decoration: none;
 
@@ -166,6 +170,12 @@ footer {
     margin: 0;
   }
 
+  header {
+    padding: 28px 0;
+    text-align: center;
+    height: auto;
+  }
+
   h2 {
     // PROJECT TITLE
     font-size: 8em;
@@ -216,5 +226,15 @@ footer {
   nav .left {
     justify-content: left;
     align-items: center;
+  }
+}
+
+@media all and (max-width: 900px) and (orientation: landscape) {
+  .landscape-title {
+    display: block;
+  }
+
+  footer {
+    display: none;
   }
 }
