@@ -17,6 +17,10 @@ const ProjectShow = () => {
   const animation2 = useAnimation();
 
   useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  useEffect(() => {
     if(inView) {
       animation.start({
         opacity: 1,
@@ -24,7 +28,7 @@ const ProjectShow = () => {
         transition: {
           ease: [0.6, 0.01, -0.05, 0.95],
           duration: 1.6,
-          delay: 0.3
+          delay: 1
         }
       })
     }

@@ -6,19 +6,19 @@ import { Link } from 'react-router-dom';
 
 const Projects = ({backgroundColor}) => {
   const [loading, setLoading] = useState(true);
-  const [scrollarrow, setScrollarrow] = useState(true);
+  // const [scrollarrow, setScrollarrow] = useState(true);
 
   useEffect(() => {
     const bodyElm = document.querySelector('body');
     bodyElm.style.backgroundColor = backgroundColor;
 
-    const timer = setTimeout(() => {
-      setScrollarrow(false);
-    }, 5000);
+    // const timer = setTimeout(() => {
+    //   setScrollarrow(false);
+    // }, 5000);
 
-    return () => clearTimeout(timer)
+    // return () => clearTimeout(timer)
 
-  }, [5000]);
+  }, []);
 
 
   const imageVariants = { 
@@ -101,27 +101,27 @@ const Projects = ({backgroundColor}) => {
     }
   }
 
-  const scrollarrowVariants = {
-    hidden: {
-      opacity: 0
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        ease: 'easeIn',
-        duration: 1,
-        delay: 1
-      }
-    },
-    exit: {
-      opacity: 0,
-      transition: {
-        ease: 'easeOut',
-        duration: 0.8
-      }
-    }
+  // const scrollarrowVariants = {
+  //   hidden: {
+  //     opacity: 0
+  //   },
+  //   visible: {
+  //     opacity: 1,
+  //     transition: {
+  //       ease: 'easeIn',
+  //       duration: 1,
+  //       delay: 1
+  //     }
+  //   },
+  //   exit: {
+  //     opacity: 0,
+  //     transition: {
+  //       ease: 'easeOut',
+  //       duration: 0.8
+  //     }
+  //   }
 
-  }
+  // }
 
   return(
     <>
@@ -141,7 +141,7 @@ const Projects = ({backgroundColor}) => {
         >
         </motion.div>
       </div>
-      <motion.div 
+      {/* <motion.div 
         className={`scroll-arrow ${scrollarrow ? 'scroll-show' : 'scroll-hidden'}`}
         variants={scrollarrowVariants}
         initial='hidden'
@@ -149,7 +149,7 @@ const Projects = ({backgroundColor}) => {
         exit='exit'
       >
         <img src='/images/scrollarrow.webp' alt='scroll arrow' />
-      </motion.div>
+      </motion.div> */}
       <main>
         { elements && elements.map(element => {
           return(

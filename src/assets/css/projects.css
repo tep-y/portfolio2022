@@ -1,3 +1,62 @@
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.projects {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  position: relative;
+  text-align: center;
+  padding: 4rem;
+}
+
+section.projects .link-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #f44336;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+section.projects .project-image {
+  display: -ms-grid;
+  display: grid;
+  min-width: 50vw;
+  min-height: 60vh;
+  overflow: hidden;
+}
+
+section.projects img {
+  width: 50vw;
+  height: 60vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media all and (max-width: 649px) {
+  section.projects .project-image {
+    min-width: 30vw;
+    min-height: 30vh;
+  }
+  section.projects img {
+    width: 308px !important;
+    height: 205px !important;
+  }
+}
+
 .scroll-arrow img {
   position: absolute;
   margin-left: auto;
@@ -44,75 +103,6 @@
   }
   100% {
     opacity: 0;
-  }
-}
-
-main {
-  width: 100%;
-  height: calc(100vh - 18vh);
-  overflow-x: scroll;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-section.projects {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  position: relative;
-  text-align: center;
-  padding: 6.25rem;
-  width: 100%;
-  height: calc(100vh - 18vh);
-  scroll-snap-align: start;
-}
-
-section.projects .link-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: #f44336;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 100;
-  background-color: none;
-  -webkit-transition: background-color 400ms;
-  transition: background-color 400ms;
-}
-
-section.projects .project-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 700px;
-  overflow: hidden;
-}
-
-section.projects img {
-  width: 700px;
-  height: 460px;
-  opacity: 0.5;
-  overflow: hidden;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-@media all and (max-width: 649px) {
-  section.projects img {
-    width: 308px !important;
-    height: 205px !important;
-  }
-}
-
-@media all and (min-width: 650px) and (max-width: 959px) {
-  section.projects img {
-    width: 532px !important;
-    height: 350px !important;
   }
 }
 /*# sourceMappingURL=projects.css.map */
