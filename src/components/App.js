@@ -15,7 +15,6 @@ const App = () => {
 
   return (
     <>
-      <Header />
       <AnimatePresence initial={true} exitBeforeEnter>
         <Routes location={location} key={location.key}>
           <Route path="/" element={<Main backgroundColor={'#DFF8EB'} />} />

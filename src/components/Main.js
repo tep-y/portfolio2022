@@ -36,6 +36,7 @@ const Main = ({backgroundColor}) => {
 
   return(
     <div>
+      <Header />
       <nav>
         <div className="row">
           <div className="column">

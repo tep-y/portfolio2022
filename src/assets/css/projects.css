@@ -1,108 +1,17 @@
 main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-section.projects {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  position: relative;
-  text-align: center;
-  padding: 4rem;
+  padding: 50px;
 }
 
 section.projects .link-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #f44336;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 100;
-}
-
-section.projects .project-image {
-  display: -ms-grid;
-  display: grid;
-  min-width: 50vw;
-  min-height: 60vh;
-  overflow: hidden;
-}
-
-section.projects img {
-  width: 50vw;
-  height: 60vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-@media all and (max-width: 649px) {
-  section.projects .project-image {
-    min-width: 30vw;
-    min-height: 30vh;
-  }
-  section.projects img {
-    width: 308px !important;
-    height: 205px !important;
-  }
-}
-
-.scroll-arrow img {
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100px;
-}
-
-@media all and (max-width: 900px) and (orientation: landscape) {
-  .scroll-arrow img {
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    top: 20vh;
-    width: 100px;
-  }
-}
-
-.scroll-show {
-  opacity: 1;
-}
-
-.scroll-hidden {
-  -webkit-animation: fadeout .5s linear forwards;
-  animation: fadeout .5s linear forwards;
-}
-
-@-webkit-keyframes fadeout {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeout {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 /*# sourceMappingURL=projects.css.map */

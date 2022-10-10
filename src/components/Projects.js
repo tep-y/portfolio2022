@@ -5,7 +5,7 @@ import elements from '../db.json';
 import { Link } from 'react-router-dom';
 
 const Projects = ({backgroundColor}) => {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   // const [scrollarrow, setScrollarrow] = useState(true);
 
   useEffect(() => {
@@ -125,7 +125,7 @@ const Projects = ({backgroundColor}) => {
 
   return(
     <>
-      <div style={{display: loading ? 'block' : 'none', textAlign: 'center', margin: '100px'}}>
+      {/* <div style={{display: loading ? 'block' : 'none', textAlign: 'center', margin: '100px'}}>
         <motion.h5
           variants={loaderVariants}
           initial='hidden'
@@ -140,20 +140,11 @@ const Projects = ({backgroundColor}) => {
           animate='visible'
         >
         </motion.div>
-      </div>
-      {/* <motion.div 
-        className={`scroll-arrow ${scrollarrow ? 'scroll-show' : 'scroll-hidden'}`}
-        variants={scrollarrowVariants}
-        initial='hidden'
-        animate='visible'
-        exit='exit'
-      >
-        <img src='/images/scrollarrow.webp' alt='scroll arrow' />
-      </motion.div> */}
+      </div> */}
       <main>
         { elements && elements.map(element => {
           return(
-            <section className='projects' key={element.id} style={{display: loading ? 'none' : 'block'}}>
+            <section className='projects' key={element.id}>
               <Link to={`/projects/${element.title}`} className='link-title' >
                 <motion.h2
                   variants={titleVariants}
@@ -164,9 +155,9 @@ const Projects = ({backgroundColor}) => {
                   {element.title}
                 </motion.h2>
               </Link>
-              <div className='project-image'>
-              <Link to={`/projects/${element.title}`} >
-                <motion.img 
+              {/* <div className='project-image'>
+              <Link to={`/projects/${element.title}`} > */}
+                {/* <motion.img 
                   variants={imageVariants}
                   initial='hidden'
                   whileHover='hover'
@@ -175,9 +166,9 @@ const Projects = ({backgroundColor}) => {
                   src={element.image001}
                   alt={element.title} 
                   onLoad={() => setLoading(false)}
-                  />
-                </Link>
-              </div>
+                  /> */}
+                {/* </Link> */}
+              {/* </div> */}
             </section>
           )
         })}

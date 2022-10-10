@@ -26,7 +26,7 @@ const Header = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          exit={{ opacity: 0, transition: { delay: 10 } }}
+          exit={{ opacity: 0, transition: { delay: .8 } }}
         >
           Hello! My name is Tep.
           <span><p className='landscape-title'>Web Developer & Graphic Designer</p></span>
