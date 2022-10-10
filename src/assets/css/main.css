@@ -140,10 +140,10 @@ nav h3:hover {
 
 nav .checkbox {
   display: block;
-  height: 32px;
-  width: 32px;
+  height: 36px;
+  width: 46px;
   position: absolute;
-  top: 50px;
+  top: 48px;
   right: 100px;
   z-index: 5;
   opacity: 0;
@@ -152,8 +152,8 @@ nav .checkbox {
 
 nav .hamburger-lines {
   display: block;
-  height: 26px;
-  width: 32px;
+  height: 36px;
+  width: 46px;
   z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -169,10 +169,95 @@ nav .hamburger-lines {
 
 nav .hamburger-lines .line {
   display: block;
-  height: 4px;
+  height: 6px;
   width: 100%;
   border-radius: 10px;
   background: #161925;
+}
+
+nav .hamburger-lines .line1 {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+nav .hamburger-lines .line2 {
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+nav .hamburger-lines .line3 {
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+nav .menu-items {
+  position: absolute;
+  top: 240px;
+  right: 340px;
+  opacity: 0;
+}
+
+nav .menu-items li {
+  list-style-type: none;
+  font-size: 4.8em;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  color: #161925;
+}
+
+nav input[type="checkbox"]:checked ~ .menu-items {
+  opacity: 1;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+}
+
+nav input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+nav input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+nav input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 
 .center {

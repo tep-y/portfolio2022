@@ -141,10 +141,10 @@ const Projects = ({backgroundColor}) => {
         >
         </motion.div>
       </div> */}
-      <main>
+      <>
         { elements && elements.map(element => {
           return(
-            <section className='projects' key={element.id}>
+            <div className='projects' key={element.id}>
               <Link to={`/projects/${element.title}`} className='link-title' >
                 <motion.h2
                   variants={titleVariants}
@@ -169,10 +169,10 @@ const Projects = ({backgroundColor}) => {
                   /> */}
                 {/* </Link> */}
               {/* </div> */}
-            </section>
+            </div>
           )
         })}
-      </main>
+      </>
     </>
   )
 };

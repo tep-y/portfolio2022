@@ -2,7 +2,7 @@ main {
   padding: 50px;
 }
 
-section.projects .link-title {
+.projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,6 +12,12 @@ section.projects .link-title {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 500px;
+  height: auto;
+  border: red solid 2px;
+}
+
+.projects .link-title {
   color: #f44336;
 }
 /*# sourceMappingURL=projects.css.map */

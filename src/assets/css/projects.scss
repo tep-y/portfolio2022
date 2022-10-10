@@ -10,11 +10,15 @@ main {
   padding: 50px;
 }
 
-section.projects {
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: auto;
+  border: red solid 2px;
+
   .link-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: $redburn;
   }
 
