@@ -1,8 +1,4 @@
-main {
-  padding: 50px;
-}
-
-.projects {
+.projects-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,12 +8,31 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 500px;
+  position: relative;
+  padding: 30px;
+}
+
+.projects {
+  text-align: center;
+  width: auto;
   height: auto;
-  border: red solid 2px;
 }
 
 .projects .link-title {
   color: #f44336;
+}
+
+.sidebar {
+  border: red solid 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  position: -webkit-sticky;
+  position: sticky;
 }
 /*# sourceMappingURL=projects.css.map */

@@ -6,37 +6,37 @@ $redburn: #f44336;
 $orange: #EF946C;
 
 
-main {
-  padding: 50px;
-}
-
-.projects {
+.projects-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 500px;
+  position: relative;
+  padding: 30px;
+}
+
+.projects {
+  text-align: center;
+  width: auto;
   height: auto;
-  border: red solid 2px;
 
   .link-title {
     color: $redburn;
   }
-
-  // .project-image {
-  //   display: grid;
-  //   min-width: 50vw;
-  //   min-height: 60vh;
-  //   overflow: hidden;
-  // }
-
-  // img {
-  //   width: 50vw;
-  //   height: 60vh;
-  //   // opacity: 0.5;
-  //   // overflow: hidden;
-  //   object-fit: cover;
-  // }
 }
+
+.sidebar {
+  border: red solid 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  // transform: translate(-20%, -20%);
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  position: sticky;
+}
+
 @media all and (max-width: 649px) {
   // PROJECTS
   // section.projects {

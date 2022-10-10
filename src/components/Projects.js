@@ -141,12 +141,13 @@ const Projects = ({backgroundColor}) => {
         >
         </motion.div>
       </div> */}
-      <>
+      <div class="projects-container">
+        <div className='projects'>
         { elements && elements.map(element => {
           return(
-            <div className='projects' key={element.id}>
-              <Link to={`/projects/${element.title}`} className='link-title' >
+              <Link to={`/projects/${element.title}`} key={element.id} >
                 <motion.h2
+                  className='link-title'
                   variants={titleVariants}
                   initial='hidden'
                   animate='visible'
@@ -155,24 +156,13 @@ const Projects = ({backgroundColor}) => {
                   {element.title}
                 </motion.h2>
               </Link>
-              {/* <div className='project-image'>
-              <Link to={`/projects/${element.title}`} > */}
-                {/* <motion.img 
-                  variants={imageVariants}
-                  initial='hidden'
-                  whileHover='hover'
-                  animate='visible'
-                  exit='exit'
-                  src={element.image001}
-                  alt={element.title} 
-                  onLoad={() => setLoading(false)}
-                  /> */}
-                {/* </Link> */}
-              {/* </div> */}
-            </div>
-          )
-        })}
-      </>
+              )
+            })}
+        </div>
+        <div class="sidebar">
+          <p>hello</p>
+        </div>
+      </div>
     </>
   )
 };
