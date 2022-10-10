@@ -35,7 +35,7 @@ const Footer = () => {
         animate="visible"
         exit="exit"
       >
-        <h3>Graphic Designer & Web Developer</h3>
+        <h2>web developer</h2>
       </motion.div>
     </footer> 
   )

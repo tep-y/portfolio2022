@@ -66,9 +66,7 @@
 }
 
 header {
-  padding: 28px 0;
-  text-align: center;
-  height: 120px;
+  margin: 30px;
 }
 
 .landscape-title {
@@ -167,16 +165,10 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: auto;
-  width: 100vw;
-  padding-top: 40px;
-  z-index: -1;
-}
-
-footer .tag-description {
-  position: relative;
-  width: 482px;
-  padding: 28px;
+  max-height: 50vh;
+  max-width: 50vw;
+  margin: 30px;
+  line-height: 0.98;
 }
 
 @media all and (max-width: 649px) {
@@ -199,9 +191,6 @@ footer .tag-description {
   p {
     font-size: 1.6em;
   }
-  footer .tag-description {
-    width: 284px;
-  }
   nav .left {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
@@ -223,9 +212,6 @@ footer .tag-description {
   p {
     font-size: 2em;
   }
-  footer .tag-description {
-    width: 326px;
-  }
   nav .left {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
@@ -239,9 +225,6 @@ footer .tag-description {
 @media all and (max-width: 900px) and (orientation: landscape) {
   .landscape-title {
     display: block;
-  }
-  footer {
-    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */
