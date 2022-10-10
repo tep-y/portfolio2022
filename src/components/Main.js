@@ -35,32 +35,33 @@ const Main = ({backgroundColor}) => {
   }
 
   return(
-    <div>
-      <Header />
+    <>
+      {/* <Header /> */}
       <nav>
-        <div className="row">
-          <div className="column">
-          </div>
-          <div className="column left">
-            <motion.div 
-              variants={navVariants}
-              initial='hidden'
-              animate='visible'
-              exit='exit'
-              className="center-nav"
-            >
-              <Link to="projects" className='link-main'>
-                <h3>Projects</h3>
-              </Link>
-              <Link to="info" className='link-main'>
-                <h3>Info</h3>
-              </Link>
-            </motion.div>
-          </div>
-        </div>
+        <h3 class="title">Hello! My name is Tep.</h3>
+        {/* <motion.div 
+          variants={navVariants}
+          initial='hidden'
+          animate='visible'
+          exit='exit'
+          className="menu-items"
+        >
+          <Link to="projects">
+            <h3>Projects</h3>
+          </Link>
+          <Link to="info">
+            <h3>Info</h3>
+          </Link>
+        </motion.div> */}
+        <input class="checkbox" type="checkbox" name="" id="" />
+        <div class="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>  
       </nav> 
       <Footer />
-    </div>
+    </>
   )
 }
 
