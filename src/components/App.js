@@ -8,6 +8,7 @@ import Main from './Main';
 import Projects from './Projects';
 import Info from './Info';
 import ProjectShow from './ProjectShow';
+import NotFound from './NotFound';
 
 const App = () => {
   const location = useLocation();
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="projects" element={<Projects backgroundColor={'#F7F7F7'}/>} />
           <Route path="info" element={<Info backgroundColor={'#EF946C'}/>} />
           <Route path="projects/:project" element={<ProjectShow />} />
+          <Route path='*' element={<NotFound />}/>
         </Routes>
       </AnimatePresence>
     </>
@@ -28,9 +30,3 @@ const App = () => {
 };
 
 export default App;
-
-// REMOVE BEFORE COMMITING / PUSHING
-// TO DO:
-// TRANSITIONS BETWEEN PAGES
-// SCROLL ARROW
-// CHANGE SCROLL ORIENTATION
