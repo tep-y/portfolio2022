@@ -3,8 +3,7 @@ import { motion } from 'framer-motion';
 import '../assets/css/projects.css';
 import elements from '../db.json';
 import { Link } from 'react-router-dom';
-import NavBar from './NavBar';
-import Back from './Back';
+import BackHome from './BackHome';
 
 const Projects = ({backgroundColor}) => {
   // const [loading, setLoading] = useState(true);
@@ -153,7 +152,7 @@ const Projects = ({backgroundColor}) => {
         >
         </motion.div>
       </div> */}
-      <Back />
+      <BackHome />
       <div className="projects-container">
         <div className='projects'>
         { elements && elements.map((element, i) => {

@@ -4,7 +4,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import '../assets/css/project.css';
 import elements from '../db.json';
-import Back from './Back';
+import BackHome from './BackHome';
 
 const ProjectShow = () => {
   const { project } = useParams();
@@ -86,7 +86,7 @@ const ProjectShow = () => {
 
   return(
     <>
-      <Back />
+      <BackHome />
       { item ? ( 
         <>
       <motion.div 
