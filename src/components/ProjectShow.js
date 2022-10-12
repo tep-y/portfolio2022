@@ -4,6 +4,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import '../assets/css/project.css';
 import elements from '../db.json';
+import Back from './Back';
 
 const ProjectShow = () => {
   const { project } = useParams();
@@ -28,7 +29,7 @@ const ProjectShow = () => {
         transition: {
           ease: [0.6, 0.01, -0.05, 0.95],
           duration: 1.6,
-          delay: 1
+          delay: 0.6
         }
       })
     }
@@ -72,11 +73,20 @@ const ProjectShow = () => {
         ease: [0.6, 0.01, -0.05, 0.95],
         duration: 1.6
       }
+    },
+    exit: {
+      opacity: 0,
+      y: 100,
+      transition: {
+        ease: [0.6, 0.01, -0.05, 0.95],
+        duration: 1.6
+      }
     }
   }
 
   return(
     <>
+      <Back />
       { item ? ( 
         <>
       <motion.div 
@@ -84,6 +94,7 @@ const ProjectShow = () => {
         variants={mainVariants}
         initial='hidden'
         animate='visible'
+        exit="exit"
       >
         <h2>
           {title}

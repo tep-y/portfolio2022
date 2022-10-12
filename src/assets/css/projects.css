@@ -32,6 +32,7 @@
   max-height: 36%;
   -o-object-fit: contain;
      object-fit: contain;
+  border-radius: 30px;
   pointer-events: none;
 }
 /*# sourceMappingURL=projects.css.map */

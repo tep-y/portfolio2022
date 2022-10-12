@@ -15,6 +15,26 @@ const NavBar = () => {
         delay: .5,
         duration: .6
       }
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        ease: 'easeInOut',
+        delay: .3
+      }
+    }
+  }
+
+  const sidebarVariants = {
+    initial: {
+      opacity: 1
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        ease: 'easeInOut',
+        delay: .3
+      }
     }
   }
 
@@ -25,7 +45,7 @@ const NavBar = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        exit={{ opacity: 0, transition: { delay: .8 } }}
+        exit="exit"
       >
         Hello! My name is Tep.
       </motion.h3>
@@ -35,11 +55,16 @@ const NavBar = () => {
         <span className="line line2"></span>
         <span className="line line3"></span>
       </div>
-      <div className="sidebar-menu">
+      <motion.div 
+        className="sidebar-menu"
+        variants={sidebarVariants}
+        initial="initial"
+        exit="exit"
+      >
         <Link to="projects" className="link"><h3>Projects</h3></Link>
         <Link to="info" className="link"><h3>About Me</h3></Link>
         <Link to="info" className="link"><h3>Contact</h3></Link>
-      </div>
+      </motion.div>
     </nav>
   )
 }

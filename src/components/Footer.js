@@ -21,7 +21,7 @@ const Footer = () => {
       opacity: 0,
       transition: {
         ease: 'easeInOut',
-        delay: 0.3
+        delay: .3
       }
     }
   }
