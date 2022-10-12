@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import Header from './Header';
 import Footer from './Footer';
 
 const Main = ({backgroundColor}) => {
@@ -30,7 +29,12 @@ const Main = ({backgroundColor}) => {
           <span class="line line2"></span>
           <span class="line line3"></span>
         </div>
-        <motion.div 
+        <div class="sidebar-menu">
+          <Link to="projects" class="link"><h3>Projects</h3></Link>
+          <Link to="info" class="link"><h3>About Me</h3></Link>
+          <Link to="info" class="link"><h3>Contact</h3></Link>
+        </div>
+        {/* <motion.div 
           variants={navVariants}
           exit='exit'
           className="menu-items"
@@ -41,7 +45,7 @@ const Main = ({backgroundColor}) => {
           <li><Link to="info">
             <h3>Info</h3>
           </Link></li>
-        </motion.div>
+        </motion.div> */}
       </nav> 
       <Footer />
     </>
