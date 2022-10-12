@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import '../assets/css/projects.css';
 import elements from '../db.json';
 import { Link } from 'react-router-dom';
+import NavBar from './NavBar';
+import Back from './Back';
 
 const Projects = ({backgroundColor}) => {
   // const [loading, setLoading] = useState(true);
@@ -123,6 +125,16 @@ const Projects = ({backgroundColor}) => {
 
   // }
 
+  const handleMouseOver = (i) => {
+    setIsHovering(i);
+  }
+
+  const handleMouseOut = () => {
+    setIsHovering(-1);
+  }
+
+  const [isHovering, setIsHovering] = useState(-1);
+
   return(
     <>
       {/* <div style={{display: loading ? 'block' : 'none', textAlign: 'center', margin: '100px'}}>
@@ -141,13 +153,19 @@ const Projects = ({backgroundColor}) => {
         >
         </motion.div>
       </div> */}
-      <div class="projects-container">
+      <Back />
+      <div className="projects-container">
         <div className='projects'>
-        { elements && elements.map(element => {
+        { elements && elements.map((element, i) => {
+
+          const isActive = i === isHovering;
+
           return(
               <Link to={`/projects/${element.title}`} key={element.id} >
                 <motion.h2
                   className='link-title'
+                  onMouseEnter={() => handleMouseOver(i)}
+                  onMouseLeave={handleMouseOut}
                   variants={titleVariants}
                   initial='hidden'
                   animate='visible'
@@ -155,12 +173,18 @@ const Projects = ({backgroundColor}) => {
                 >
                   {element.title}
                 </motion.h2>
+                
+                <div className='image-container'>
+                  <img 
+                    src={element.image001}
+                    alt="image preview" 
+                    className="hover-image" 
+                    style={{display: isActive ?  'block' : 'none'}}
+                  />
+                </div>
               </Link>
               )
             })}
-        </div>
-        <div class="sidebar">
-          <p>hello</p>
         </div>
       </div>
     </>

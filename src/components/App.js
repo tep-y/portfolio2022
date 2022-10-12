@@ -3,7 +3,6 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import '../assets/css/main.css';
 import '../assets/fontawesome/css/all.css';
-import Header from './Header';
 import Main from './Main';
 import Projects from './Projects';
 import Info from './Info';
