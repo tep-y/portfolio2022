@@ -1,14 +1,10 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Footer from './Footer';
+import BackHome from './BackHome';
 import '../assets/css/info.css';
+// import portrait from '../images/IMG_0041.jpg';
 
-const Info = ({backgroundColor}) => {
-  useEffect(() => {
-    const bodyElm = document.querySelector('body');
-    bodyElm.style.backgroundColor = backgroundColor;
-  }, []);
-
+const Info = () => {
   const containerVariants = {
     hidden: {
       opacity: 0
@@ -29,41 +25,33 @@ const Info = ({backgroundColor}) => {
 
   return(
     <>
+      <BackHome />
       <motion.div 
-        className='container-info'
+        className='info-container'
         variants={containerVariants} 
         initial='hidden' 
         animate='visible' 
         exit='exit'  
       >
-        <section className='info center'>
-          <div className='marquee'>
-            <div className='marquee-inner'>
-              <span><span className='info-subject'>Skills</span> HTML • Javascript • CSS • SASS • ReactJS • Figma • And many more!</span>
-              <span><span className='info-subject'>Skills</span> HTML • Javascript • CSS • SASS • ReactJS • Figma • And many more!</span>
-              <span><span className='info-subject'>Skills</span> HTML • Javascript • CSS • SASS • ReactJS • Figma • And many more!</span>
-              <span><span className='info-subject'>Skills</span> HTML • Javascript • CSS • SASS • ReactJS • Figma • And many more!</span>
-            </div>
+        <div className='marquee'>
+          <div className='marquee-inner'>
+            <span className='info-subject'>&bull; bonjour! hi! bonjour! hi! &bull;</span>
+            <span className='info-subject'>&bull; bonjour! hi! bonjour! hi! &bull;</span>
+            <span className='info-subject'>&bull; bonjour! hi! bonjour! hi! &bull;</span>
+            <span className='info-subject'>&bull; bonjour! hi! bonjour! hi! &bull;</span>
           </div>
-        </section>
-        <section className='info'>
-          <div className='marquee'>
-            <span><span className='info-subject'>Other likes</span>Dogs, hockey, and potatoes</span>
-          </div>
-        </section>
-        <section className='info'>
-          <div className='marquee'>
-            <span>
-              <span className='info-subject'>To know more</span>
-                <a href='https://www.linkedin.com/in/tep-y/' target='_blank'><i className="fa-brands fa-linkedin"></i></a>
-                <a href='https://github.com/tep-y' target='_blank'><i className="fa-brands fa-github"></i></a>
-                <a href='https://www.instagram.com/robauheart/' target='_blank'><i className="fa-brands fa-instagram"></i></a>
-                <a href='mailto:tep.yith@gmail.com' target='_blank'><i className="fa-solid fa-square-envelope"></i></a>
-            </span>
-          </div>
-        </section>
+        </div>
       </motion.div>
-      <Footer />
+      <div className='about-container'>
+        <div className='column'>
+          <img src='/images/IMG_0041.jpg' alt='tep yith web developer' />
+        </div>
+        <div className='column'><p>Hello! My name is Tep. I am a front-end web developer 
+        with a good eye for design. I love dogs, hockey and doing Sudokus. 
+        I am always curious about new and exciting technologies and methods.
+        Based in Montréal, Québec, you can easily find me in a coffee shop coding and/or designing.</p>
+        </div>
+      </div>
     </>
   )
 };

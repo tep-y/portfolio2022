@@ -4,20 +4,20 @@
     "title": "alcyon",
     "description": "As a lifestyle brand, Alcyon was born from the desire to create products that fulfill the essential needs of outdoor adventurers and keep them connected to the whims of nature.",
     "detail": "Inspired by the outdoors, Alcyon's logo encompass what nature brings. The empty space represents adventures of the unknown join together with the DNA of a leaf which represents nature. The triangle shape, inspired by the 'A' of Alcyon, depicts the arrow of a compass. A guide for our outdoor escapades.",
-    "image001": "images/alcyon_001.jpg",
-    "image002": "images/alcyon_002.jpg",
-    "image003": "images/alcyon_003.jpg",
-    "image004": "images/alcyon_004.jpg"
+    "image001": "images/projects/alcyon_001.jpg",
+    "image002": "images/projects/alcyon_002.jpg",
+    "image003": "images/projects/alcyon_003.jpg",
+    "image004": "images/projects/alcyon_004.jpg"
   },
   {
     "id": 2,
     "title": "cocotte",
     "description": "Montreal based brand Cocotte offers bike-oriented products that represent the urban world of cycling like you've never seen it before. Bike bags and accessories will make your bicycle a real work of art, while bags and comfortable sports clothes will let you enjoy your favorite outdoor sport to the fullest.",
     "detail": "Reimagining the famous Cocotte brand, I based the concept on Alleycat bike messengers. The riders didn't wear conventional race numbers, instead they used spoke cards or Tarot cards. I combined playing cards with patterns of Tarot cards to create the design. ",
-    "image001": "images/cocotte_001.jpg",
-    "image002": "images/cocotte_002.jpg",
-    "image003": "images/cocotte_003.jpg",
-    "image004": "images/cocotte_004.jpg"
+    "image001": "images/projects/cocotte_001.jpg",
+    "image002": "images/projects/cocotte_002.jpg",
+    "image003": "images/projects/cocotte_003.jpg",
+    "image004": "images/projects/cocotte_004.jpg"
   },
   {
     "id": 3,
@@ -25,30 +25,30 @@
     "description": "La Distillerie is a cocktail bar not to be missed. The staff's knowledge and experience allow for expertly made craft cocktails that will not only satiate your thirst, but leave you craving your next visit. Sit at the bar, and take in the atmosphere while trying a few of the bartender's inspirations.",
     "detail": "With their extensive list of beverages and snacks, I was tasked to find a way to make it easier for the owner to update his drink menu without any fuss. Taking over their old website on Wix, I utilized the CMS to link the new modern bar menu to a database that I implemented to facilitate the owners' frequent required updates. By removing and replacing the old pictures they had with icons, it allowed more breathing room and flexibility to upgrade any item detail. Additionally, the scrolling length also decreased, giving the client less of a headache searching for their favorite cocktails.",
     "link": "https://party.pubdistillerie.com",
-    "image001": "images/distillerie_001.jpg",
-    "image002": "images/distillerie_002.jpg",
-    "image003": "images/distillerie_003.jpg",
-    "image004": "images/distillerie_004.jpg"
+    "image001": "images/projects/distillerie_001.jpg",
+    "image002": "images/projects/distillerie_002.jpg",
+    "image003": "images/projects/distillerie_003.jpg",
+    "image004": "images/projects/distillerie_004.jpg"
   },
   {
     "id": 4,
     "title": "freepour",
     "description": "Free Pour was born during my Web Development course. In less than a week, we had to code and build a website about cocktails. This website was created using HTML, CSS/SCSS, JavaScript, Ruby, Heroku, and GitHub.",
     "link": "https://freepour-cocktails.herokuapp.com/",
-    "image001": "images/freepour_001.jpg",
-    "image002": "images/freepour_002.mp4",
-    "image003": "images/freepour_003.jpg",
-    "image004": "images/freepour_004.jpg"
+    "image001": "images/projects/freepour_001.jpg",
+    "image002": "images/projects/freepour_002.mp4",
+    "image003": "images/projects/freepour_003.jpg",
+    "image004": "images/projects/freepour_004.jpg"
   },
   {
     "id": 5,
     "title": "leduc",
     "description": "Leduc provides design, consultation, landscape construction, and installation for residential or corporate clients. Whether you want a lush backyard garden or commercial landscaping for a property, this company can provide it all.",
     "detail": "Putting focus on the plants itself, I wanted Leduc to shine based on what it represents.. Nature! The waves that come with the design, illustrate the two vital elements Leduc must work with, water and soil. With the mix of different typefaces, it shows the unpredictabilities but also the beauty of growing plants and creating a welcoming surroundings.",
-    "image001": "images/leduc_001.jpg",
-    "image002": "images/leduc_002.jpg",
-    "image003": "images/leduc_003.jpg",
-    "image004": "images/leduc_004.jpg"
+    "image001": "images/projects/leduc_001.jpg",
+    "image002": "images/projects/leduc_002.jpg",
+    "image003": "images/projects/leduc_003.jpg",
+    "image004": "images/projects/leduc_004.jpg"
   },
   {
     "id": 6,
@@ -56,19 +56,19 @@
     "description": "NotifiQ is a web app that relieves the stress of physically waiting in lineups. It's simple. Just a few clicks on your phone, and you're in queue to go into the store. While you wait, you can check your email and perfect things to do that day. Save time and money with NotifiQ.",
     "detail": "This fictional web application was created along with my team during bootcamp. We had to organize and code the back-end all the way to the front-end. What we used; Ruby on Rails, HTML, CSS/SCSS, JavaScript, SQL, Figma, GitHub and Heroku. After our final presentation, I redesign the app to enhance the UI & UX.",
     "link": "https://www.youtube.com/watch?v=7VBFMMoaGkA&t=1203s",
-    "image001": "images/notifiq_001.jpg",
-    "image002": "images/notifiq_002.mp4",
-    "image003": "images/notifiq_003.jpg",
-    "image004": "images/notifiq_004.jpg"
+    "image001": "images/projects/notifiq_001.jpg",
+    "image002": "images/projects/notifiq_002.mp4",
+    "image003": "images/projects/notifiq_003.jpg",
+    "image004": "images/projects/notifiq_004.jpg"
   },
   {
     "id": 7,
     "title": "tchin! tchin!",
     "description": "Tchin! Tchin! is an artisanal cocktail syrup. Made in small batches with fresh fruits, spices and herbs that are hand-pressed and infused with organic cane sugar, it can be used to craft premium cocktails at home or in any bar.",
     "detail": "With Adobe Photoshop and Figma, I tried to rethink the design in an imaginative way. Using the celebratory aspect of the cocktail industry, I wanted the new design to designate happiness and camaraderie. I renamed the syrup Tchin! Tchin! because it is a term used in many French regions to signify 'to your health', the equivalent to 'cheers'. In most bars, staff uses tape to identify their homemade syrup, something I wanted to bring into homes of cocktail enthusiast.",
-    "image001": "images/tchin_001.jpg",
-    "image002": "images/tchin_002.jpg",
-    "image003": "images/tchin_003.jpg",
-    "image004": "images/tchin_004.jpg"
+    "image001": "images/projects/tchin_001.jpg",
+    "image002": "images/projects/tchin_002.jpg",
+    "image003": "images/projects/tchin_003.jpg",
+    "image004": "images/projects/tchin_004.jpg"
   }
 ]
