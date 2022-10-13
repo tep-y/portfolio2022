@@ -5,7 +5,7 @@ import '../assets/css/main.css';
 import '../assets/fontawesome/css/all.css';
 import Main from './Main';
 import Projects from './Projects';
-import Info from './Info';
+import AboutMe from './AboutMe';
 import ProjectShow from './ProjectShow';
 import NotFound from './NotFound';
 import Contact from './Contact';
@@ -19,7 +19,7 @@ const App = () => {
         <Routes location={location} key={location.key}>
           <Route path="/" element={<Main />} />
           <Route path="projects" element={<Projects />} />
-          <Route path="info" element={<Info />} />
+          <Route path="aboutme" element={<AboutMe />} />
           <Route path="contact" element={<Contact />} />
           <Route path="projects/:project" element={<ProjectShow />} />
           <Route path='*' element={<NotFound />}/>

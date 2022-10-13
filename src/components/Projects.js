@@ -5,49 +5,13 @@ import elements from '../db.json';
 import { Link } from 'react-router-dom';
 import BackHome from './BackHome';
 
-const Projects = ({backgroundColor}) => {
+const Projects = () => {
   // const [loading, setLoading] = useState(true);
   // const [scrollarrow, setScrollarrow] = useState(true);
 
   useEffect(() => {
-    const bodyElm = document.querySelector('body');
-    bodyElm.style.backgroundColor = backgroundColor;
     window.scrollTo(0, 0)
-    // const timer = setTimeout(() => {
-    //   setScrollarrow(false);
-    // }, 5000);
-
-    // return () => clearTimeout(timer)
-
   }, []);
-
-
-  const imageVariants = { 
-    hidden: {
-      scale: 1,
-      opacity: 0,
-      y: 200
-    },
-    hover: {
-      scale: 1.08
-    },
-    visible: {
-      opacity: 0.5,
-      y: 0,
-      transition: {
-        ease: [0.6, 0.01, -0.05, 0.95],
-        duration: 1.6
-      }
-    },
-    exit: {
-      opacity: 0,
-      y: 200,
-      transition: {
-        ease: [0.6, 0.01, -0.05, 0.95],
-        duration: 1.6
-      }
-    }
-  };
 
   const titleVariants = { 
     hidden: {
@@ -179,7 +143,6 @@ const Projects = ({backgroundColor}) => {
                     alt="image preview" 
                     className="hover-image" 
                     style={{display: isActive ?  'block' : 'none'}}
-                    variants={titleVariants}
                     exit={{ opacity: 0, transition: { ease: 'easeOut', duration: 0.6 } }}
                   />
                 </div>

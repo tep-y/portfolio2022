@@ -58,10 +58,6 @@
   display: none;
 }
 
-a {
-  text-decoration: none;
-}
-
 a .home-link {
   color: black;
   font-family: 'Poppins', sans-serif;
@@ -71,13 +67,6 @@ a .home-link {
   text-decoration: none;
   color: #f44336;
   font-size: 1em;
-}
-
-.test {
-  width: 100vw;
-  height: 100vh;
-  border: blue solid 2px;
-  z-index: 5;
 }
 
 h2 {
@@ -128,6 +117,10 @@ nav {
   padding: 30px 100px 0 30px;
   position: relative;
   z-index: 0;
+}
+
+nav .small-title {
+  display: none;
 }
 
 nav .checkbox {
@@ -352,14 +345,74 @@ footer {
 }
 
 @media all and (max-width: 649px) {
-  body {
-    width: auto;
-    margin: 0;
+  nav .title {
+    display: none;
   }
-  header {
-    padding: 28px 0;
-    text-align: center;
-    height: auto;
+  nav .small-title {
+    display: block;
+  }
+  nav .checkbox {
+    position: absolute;
+    display: block;
+    height: 42px;
+    width: 42px;
+    top: 36px;
+    right: 30px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+  nav .hamburger-lines {
+    display: block;
+    height: 24px;
+    width: 30px;
+    position: absolute;
+    top: 36px;
+    right: 30px;
+    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  nav .hamburger-lines .line {
+    height: 4px;
+  }
+  .sidebar-menu {
+    padding: 4rem;
+    z-index: -1;
+  }
+  nav input[type="checkbox"]:checked ~ .sidebar-menu {
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+  nav .back-lines {
+    display: block;
+    height: 24px;
+    width: 30px;
+    position: absolute;
+    top: 36px;
+    right: 30px;
+    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  nav .back-lines .line {
+    height: 4px;
   }
   h2 {
     font-size: 8em;
@@ -369,7 +422,7 @@ footer {
     font-size: 2.4em;
   }
   p {
-    font-size: 1.6em;
+    font-size: 1.4em;
   }
 }
 
@@ -383,6 +436,9 @@ footer {
   }
   p {
     font-size: 2em;
+  }
+  nav .small-title {
+    display: none;
   }
 }
 

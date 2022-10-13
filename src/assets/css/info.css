@@ -99,8 +99,20 @@ section .contact-container {
 }
 
 .about-container img {
-  width: 600px;
+  max-width: 600px;
   height: auto;
+}
+
+.about-container a {
+  text-decoration: none;
+  color: #f44336;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+}
+
+.about-container a:hover {
+  background-color: #f44336;
+  color: white;
 }
 
 @-webkit-keyframes marquee {
@@ -195,14 +207,35 @@ a:hover i {
 }
 
 @media all and (max-width: 649px) {
+  .contact h3 {
+    font-size: 5em;
+  }
   i {
-    font-size: 2.4em !important;
+    font-size: 6em !important;
+  }
+  .about-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .about-container .column {
+    padding: 18px;
+  }
+  .about-container p {
+    text-align: center;
+  }
+  .about-container img {
+    max-width: 380px;
   }
 }
 
 @media all and (min-width: 650px) and (max-width: 959px) {
-  i {
-    font-size: 4em !important;
+  .about-container .column {
+    padding: 48px;
+  }
+  .about-container img {
+    width: 380px;
   }
 }
 /*# sourceMappingURL=info.css.map */

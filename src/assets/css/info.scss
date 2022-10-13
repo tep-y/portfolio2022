@@ -10,6 +10,7 @@ $bdazzledblue: #235789;
 body {
   background-color: $grey;
 }
+
 section .contact-container {
   position: relative;
 }
@@ -86,8 +87,20 @@ section .contact-container {
 	}
 
   img {
-    width: 600px;
+    max-width: 600px;
     height: auto;
+  }
+
+  a {
+    text-decoration: none;
+    color: $redburn;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+  }
+  
+  a:hover {
+    background-color: $redburn;
+    color: white;
   }
 }
 
@@ -138,13 +151,42 @@ a:hover i {
 }
 
 @media all and (max-width: 649px) {
+  .contact {
+    h3 {
+      font-size: 5em;
+    }
+  }
+
   i {
-    font-size: 2.4em !important;
+    font-size: 6em !important;
+  }
+
+  .about-container {
+    display: grid;
+	  grid-template-columns: 1fr;
+
+    .column {
+      padding: 18px;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    img {
+      max-width: 380px;
+    }
   }
 }
 
 @media all and (min-width: 650px) and (max-width: 959px) {
-  i {
-    font-size: 4em !important;
+  .about-container {
+    .column {
+      padding: 48px;
+    }
+
+    img {
+      width: 380px;
+    }
   }
 }

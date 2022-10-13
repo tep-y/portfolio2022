@@ -49,6 +49,15 @@ const NavBar = () => {
       >
         Hello! My name is Tep.
       </motion.h3>
+      <motion.h3 
+        className='small-title'
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
+        Hello!
+      </motion.h3>
       <input className="checkbox" type="checkbox" name="hamburger menu" />
       <div className="hamburger-lines">
         <span className="line line1"></span>
@@ -62,7 +71,7 @@ const NavBar = () => {
         exit="exit"
       >
         <Link to="projects" className="link"><h3>Projects</h3></Link>
-        <Link to="info" className="link"><h3>About Me</h3></Link>
+        <Link to="aboutme" className="link"><h3>About Me</h3></Link>
         <Link to="contact" className="link"><h3>Contact</h3></Link>
       </motion.div>
     </nav>
