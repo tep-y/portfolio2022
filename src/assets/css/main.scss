@@ -17,6 +17,12 @@ $bdazzledblue: #235789;
   font-size: 10px;
 }
 
+body {
+  overflow: -moz-scrollbars-vertical;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 ::-webkit-scrollbar {
   background-color: transparent;
   width: 0px;
