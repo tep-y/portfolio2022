@@ -12,7 +12,7 @@ import Contact from './Contact';
 
 const App = () => {
   const location = useLocation();
-
+  
   return (
     <>
       <AnimatePresence initial={true} exitBeforeEnter>

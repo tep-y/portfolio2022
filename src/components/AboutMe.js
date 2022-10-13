@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import BackHome from './BackHome';
 import '../assets/css/info.css';

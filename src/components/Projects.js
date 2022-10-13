@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 import BackHome from './BackHome';
 
 const Projects = () => {
+  // TODO: implement loader
   // const [loading, setLoading] = useState(true);
-  // const [scrollarrow, setScrollarrow] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -37,55 +37,33 @@ const Projects = () => {
     }
   };
 
-  const loaderVariants = {
-    hidden: {
-      opacity: 0
-    },
-    visible: {
-      opacity: [0, 1],
-      transition: {
-        repeat: 8,
-        repeatType: 'reverse',
-        delay: 1,
-        duration: 1.6,
-        ease: 'easeInOut'
-      }
-    }
-  }
+  // const loaderVariants = {
+  //   hidden: {
+  //     opacity: 0
+  //   },
+  //   visible: {
+  //     opacity: [0, 1],
+  //     transition: {
+  //       repeat: 8,
+  //       repeatType: 'reverse',
+  //       delay: 1,
+  //       duration: 1.6,
+  //       ease: 'easeInOut'
+  //     }
+  //   }
+  // }
 
-  const spinnerVariants = {
-    hidden: {
-      opacity: 0
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        delay: 1,
-        duration: .6
-      }
-    }
-  }
-
-  // const scrollarrowVariants = {
+  // const spinnerVariants = {
   //   hidden: {
   //     opacity: 0
   //   },
   //   visible: {
   //     opacity: 1,
   //     transition: {
-  //       ease: 'easeIn',
-  //       duration: 1,
-  //       delay: 1
-  //     }
-  //   },
-  //   exit: {
-  //     opacity: 0,
-  //     transition: {
-  //       ease: 'easeOut',
-  //       duration: 0.8
+  //       delay: 1,
+  //       duration: .6
   //     }
   //   }
-
   // }
 
   const handleMouseOver = (i) => {

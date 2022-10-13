@@ -38,6 +38,10 @@ $bdazzledblue: #235789;
   animation: spin 2s linear infinite;
 }
 
+.loader-hide {
+  display: none;
+}
+
 /* Safari */
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }

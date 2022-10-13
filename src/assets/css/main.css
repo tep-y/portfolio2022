@@ -33,6 +33,10 @@
           animation: spin 2s linear infinite;
 }
 
+.loader-hide {
+  display: none;
+}
+
 /* Safari */
 @-webkit-keyframes spin {
   0% {
