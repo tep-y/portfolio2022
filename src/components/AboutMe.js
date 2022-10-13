@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import BackHome from './BackHome';
 import '../assets/css/info.css';
 import { Link } from 'react-router-dom';
 
 const AboutMe = () => {
+  useEffect(() => {
+    document.body.style.backgroundColor = "#F7F7F7";
+  });
+
   const marqueeVariants = {
     hidden: {
       opacity: 0

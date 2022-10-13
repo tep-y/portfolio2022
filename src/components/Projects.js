@@ -11,6 +11,7 @@ const Projects = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    document.body.style.backgroundColor = "#F7F7F7";
   }, []);
 
   const titleVariants = { 

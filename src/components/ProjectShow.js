@@ -19,6 +19,7 @@ const ProjectShow = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    document.body.style.backgroundColor = "#F7F7F7";
   }, [])
 
   useEffect(() => {

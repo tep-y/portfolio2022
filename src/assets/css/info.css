@@ -1,9 +1,7 @@
-body {
-  background-color: #F7F7F7;
-}
-
 section .contact-container {
   position: relative;
+  width: 100vw;
+  height: 300px;
 }
 
 .contact {
@@ -208,7 +206,7 @@ a:hover i {
 
 @media all and (max-width: 649px) {
   .contact h3 {
-    font-size: 5em;
+    font-size: 4em;
   }
   i {
     font-size: 6em !important;

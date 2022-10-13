@@ -64,10 +64,6 @@ body {
   }
 }
 
-.landscape-title {
-  display: none;
-}
-
 a .home-link {
   color: black;
   font-family: 'Poppins', sans-serif;
@@ -126,7 +122,7 @@ nav {
           align-items: center;
   padding: 30px 100px 0 30px;
   position: relative;
-  z-index: 0;
+  z-index: 5;
 }
 
 nav .small-title {
@@ -425,7 +421,7 @@ footer {
     height: 4px;
   }
   h2 {
-    font-size: 8em;
+    font-size: 6.5em;
     font-family: 'Maragsa', 'Poppins', sans-serif;
   }
   h3, h5 {
@@ -449,12 +445,6 @@ footer {
   }
   nav .small-title {
     display: none;
-  }
-}
-
-@media all and (max-width: 900px) and (orientation: landscape) {
-  .landscape-title {
-    display: block;
   }
 }
 /*# sourceMappingURL=main.css.map */

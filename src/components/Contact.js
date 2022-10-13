@@ -4,6 +4,10 @@ import '../assets/css/info.css';
 import BackHome from './BackHome';
 
 const Contact = () => {
+  useEffect(() => {
+    document.body.style.backgroundColor = "#EF946C";
+  });
+
   const titleVariants = {
     hidden: {
       y: -50,
