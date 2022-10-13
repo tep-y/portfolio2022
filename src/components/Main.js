@@ -6,7 +6,7 @@ import NavBar from './NavBar';
 const Main = () => {
   return(
     <motion.div 
-      class="main-container" 
+      className="main-container" 
       animate={{backgroundColor: ['#f7f7f7', '#DFF8EB']}} 
       exit={{backgroundColor: ['#DFF8EB', '#f7f7f7']}}
     >

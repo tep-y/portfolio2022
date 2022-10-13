@@ -10,16 +10,6 @@
     "image004": "images/projects/alcyon_004.jpg"
   },
   {
-    "id": 2,
-    "title": "cocotte",
-    "description": "Montreal based brand Cocotte offers bike-oriented products that represent the urban world of cycling like you've never seen it before. Bike bags and accessories will make your bicycle a real work of art, while bags and comfortable sports clothes will let you enjoy your favorite outdoor sport to the fullest.",
-    "detail": "Reimagining the famous Cocotte brand, I based the concept on Alleycat bike messengers. The riders didn't wear conventional race numbers, instead they used spoke cards or Tarot cards. I combined playing cards with patterns of Tarot cards to create the design. ",
-    "image001": "images/projects/cocotte_001.jpg",
-    "image002": "images/projects/cocotte_002.jpg",
-    "image003": "images/projects/cocotte_003.jpg",
-    "image004": "images/projects/cocotte_004.jpg"
-  },
-  {
     "id": 3,
     "title": "distillerie",
     "description": "La Distillerie is a cocktail bar not to be missed. The staff's knowledge and experience allow for expertly made craft cocktails that will not only satiate your thirst, but leave you craving your next visit. Sit at the bar, and take in the atmosphere while trying a few of the bartender's inspirations.",
@@ -39,16 +29,6 @@
     "image002": "images/projects/freepour_002.mp4",
     "image003": "images/projects/freepour_003.jpg",
     "image004": "images/projects/freepour_004.jpg"
-  },
-  {
-    "id": 5,
-    "title": "leduc",
-    "description": "Leduc provides design, consultation, landscape construction, and installation for residential or corporate clients. Whether you want a lush backyard garden or commercial landscaping for a property, this company can provide it all.",
-    "detail": "Putting focus on the plants itself, I wanted Leduc to shine based on what it represents.. Nature! The waves that come with the design, illustrate the two vital elements Leduc must work with, water and soil. With the mix of different typefaces, it shows the unpredictabilities but also the beauty of growing plants and creating a welcoming surroundings.",
-    "image001": "images/projects/leduc_001.jpg",
-    "image002": "images/projects/leduc_002.jpg",
-    "image003": "images/projects/leduc_003.jpg",
-    "image004": "images/projects/leduc_004.jpg"
   },
   {
     "id": 6,

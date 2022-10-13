@@ -53,7 +53,7 @@ const Contact = () => {
 
   return(
     <motion.div 
-      class="main-container" 
+      className="main-container" 
       animate={{backgroundColor: ['#f7f7f7', '#EF946C']}} 
       exit={{backgroundColor: ['#EF946C', '#f7f7f7']}}
     >
