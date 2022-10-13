@@ -8,6 +8,7 @@ import Projects from './Projects';
 import Info from './Info';
 import ProjectShow from './ProjectShow';
 import NotFound from './NotFound';
+import Contact from './Contact';
 
 const App = () => {
   const location = useLocation();
@@ -16,9 +17,10 @@ const App = () => {
     <>
       <AnimatePresence initial={true} exitBeforeEnter>
         <Routes location={location} key={location.key}>
-          <Route path="/" element={<Main backgroundColor={'#DFF8EB'} />} />
-          <Route path="projects" element={<Projects backgroundColor={'#F7F7F7'}/>} />
-          <Route path="info" element={<Info backgroundColor={'#EF946C'}/>} />
+          <Route path="/" element={<Main />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="info" element={<Info />} />
+          <Route path="contact" element={<Contact />} />
           <Route path="projects/:project" element={<ProjectShow />} />
           <Route path='*' element={<NotFound />}/>
         </Routes>

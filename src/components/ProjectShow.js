@@ -163,9 +163,13 @@ const ProjectShow = () => {
       </>
       )
       : <div style={{textAlign: 'center'}}><h3>No project to see here. Try again :)</h3></div>}
-      <div className='footer-project'>
+      <motion.div 
+        className='footer-project'
+        variants={mainVariants}
+        exit='exit'
+      >
             <Link to='/projects'><p>Back to all projects</p></Link>
-      </div>
+      </motion.div>
     </>
   )
 };

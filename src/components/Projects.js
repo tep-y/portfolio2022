@@ -12,7 +12,7 @@ const Projects = ({backgroundColor}) => {
   useEffect(() => {
     const bodyElm = document.querySelector('body');
     bodyElm.style.backgroundColor = backgroundColor;
-
+    window.scrollTo(0, 0)
     // const timer = setTimeout(() => {
     //   setScrollarrow(false);
     // }, 5000);
@@ -174,11 +174,13 @@ const Projects = ({backgroundColor}) => {
                 </motion.h2>
                 
                 <div className='image-container'>
-                  <img 
+                  <motion.img 
                     src={element.image001}
                     alt="image preview" 
                     className="hover-image" 
                     style={{display: isActive ?  'block' : 'none'}}
+                    variants={titleVariants}
+                    exit={{ opacity: 0, transition: { ease: 'easeOut', duration: 0.6 } }}
                   />
                 </div>
               </Link>

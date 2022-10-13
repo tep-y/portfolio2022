@@ -7,7 +7,7 @@ import NavBar from './NavBar';
 const Main = ({backgroundColor}) => {
   useEffect(() => {
     const bodyElm = document.querySelector('body');
-    bodyElm.style.backgroundColor = backgroundColor;
+    // bodyElm.style.backgroundColor = backgroundColor;
   }, []);
 
   const navVariants = {
@@ -21,10 +21,14 @@ const Main = ({backgroundColor}) => {
   }
 
   return(
-    <>
+    <motion.div 
+      class="main-container" 
+      animate={{backgroundColor: ['#f7f7f7', '#DFF8EB']}} 
+      exit={{backgroundColor: ['#DFF8EB', '#f7f7f7']}}
+    >
       <NavBar />
       <Footer />
-    </>
+    </motion.div>
   )
 }
 

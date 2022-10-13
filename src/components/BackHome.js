@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const Back = () => {
+const BackHome = () => {
   let navigate = useNavigate();
 
   const backHome = () => {
@@ -20,4 +20,4 @@ const Back = () => {
   )
 }
 
-export default Back;
+export default BackHome;

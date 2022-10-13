@@ -63,7 +63,7 @@ const NavBar = () => {
       >
         <Link to="projects" className="link"><h3>Projects</h3></Link>
         <Link to="info" className="link"><h3>About Me</h3></Link>
-        <Link to="info" className="link"><h3>Contact</h3></Link>
+        <Link to="contact" className="link"><h3>Contact</h3></Link>
       </motion.div>
     </nav>
   )

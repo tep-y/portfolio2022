@@ -23,6 +23,11 @@ $bdazzledblue: #235789;
   height: 0px;
 }
 
+.main-container {
+  width: 100vw;
+  height: 100vh;
+}
+
 // .wrapper {
 //   display: flex;
 //   height: 100%;
@@ -83,6 +88,13 @@ a {
   font-size: 1em;
 }
 
+.test {
+  width: 100vw;
+  height: 100vh;
+  border: blue solid 2px;
+  z-index: 5;
+}
+
 // FONT
 h2 {
   // PROJECT TITLE
@@ -128,6 +140,7 @@ nav {
   align-items: center;
   padding: 30px 100px 0 30px;
   position: relative;
+  z-index: 0;
 }
 
 nav .checkbox {
@@ -230,6 +243,7 @@ nav .back-lines .line3 {
   right: 0;
   transition: transform 0.3s ease-in-out;
   transform: translate(150%);
+  z-index: 1;
 
   .link h3 {
     font-weight: 500;
