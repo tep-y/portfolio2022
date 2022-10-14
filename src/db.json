@@ -50,5 +50,16 @@
     "image002": "images/projects/tchin_002.jpg",
     "image003": "images/projects/tchin_003.jpg",
     "image004": "images/projects/tchin_004.jpg"
+  },
+  {
+    "id": 8,
+    "title": "weather app",
+    "description": "This weather app project uses HTML, CSS, and Javascript. I wanted to built a simple yet effective app that showcases the toggle function. When the user click the 'light' or 'dark' button, the app switches from 'day' mode to 'night' mode. It was a fun challenge!",
+    "detail": "In addition to implementing the toggle function, I took the opportunity to make fun weather icons. I created, with Adobe Illustrator, icons to showcase different weather; Sunny with clouds, rain, snow, and thunder. You can see my code on my GitHub, just follow the link below.",
+    "link": "https://github.com/tep-y/weatherapp",
+    "image001": "images/projects/weatherapp_001.jpg",
+    "image002": "images/projects/weatherapp_002.mp4",
+    "image003": "images/projects/weatherapp_003.jpg",
+    "image004": "images/projects/weatherapp_004.jpg"
   }
 ]
