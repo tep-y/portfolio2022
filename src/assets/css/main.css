@@ -394,12 +394,13 @@ footer {
     height: 4px;
   }
   .sidebar-menu {
+    text-align: center;
     padding: 4rem;
     z-index: -1;
   }
   nav input[type="checkbox"]:checked ~ .sidebar-menu {
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
   nav .back-lines {
     display: block;
