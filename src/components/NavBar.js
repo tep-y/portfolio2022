@@ -56,7 +56,7 @@ const NavBar = () => {
         animate="visible"
         exit="exit"
       >
-        Hello!
+        Hi! I'm Tep.
       </motion.h3>
       <input className="checkbox" type="checkbox" name="hamburger menu" />
       <div className="hamburger-lines">

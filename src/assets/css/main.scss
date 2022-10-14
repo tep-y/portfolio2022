@@ -293,16 +293,6 @@ footer {
 
 // RESPONSIVENESS
 @media all and (max-width: 649px) {
-  // body {
-  //   width: auto;
-  //   margin: 0;
-  // }
-
-  // header {
-  //   padding: 28px 0;
-  //   text-align: center;
-  //   height: auto;
-  // }
   nav .title {
     display: none;
   }
@@ -379,6 +369,16 @@ footer {
   p {
     font-size: 1.4em;
   }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-height: 50vh;
+    max-width: 50vw;
+    margin: 30px 30px 80px 30px;
+    line-height: 0.98;
+  }
 }
 
 @media all and (min-width: 650px) and (max-width: 959px) {
@@ -399,24 +399,32 @@ footer {
   nav .small-title {
     display: none;
   }
-  // footer {
-  //   .tag-description {
-  //     width: 326px;
-  //   }
-  // }
-
-  // nav .left {
-  //   justify-content: left;
-  //   align-items: center;
-  // }
 }
 
 @media all and (max-width: 900px) and (orientation: landscape) {
-  // .landscape-title {
-  //   display: block;
-  // }
-  
-  // footer {
-  //   display: none;
-  // }
+  .sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    background-color: $grey;
+    height: 100vh;
+    width: 100%;
+    padding: 6rem;
+
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-height: 50vh;
+    max-width: 30vw;
+    margin: 30px 30px 72px 30px;
+    line-height: 0.98;
+
+    h2 {
+      font-size: 8em;
+    }
+  }
 }
