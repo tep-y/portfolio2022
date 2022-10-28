@@ -61,5 +61,16 @@
     "image002": "images/projects/weatherapp_002.mp4",
     "image003": "images/projects/weatherapp_003.jpg",
     "image004": "images/projects/weatherapp_004.jpg"
+  },
+  {
+    "id": 9,
+    "title": "music player",
+    "description": "This is a music player app that I made using HTML, CSS, and Javascript. On this app you can play, pause, go to the next or previous song with a click of a button. I also implemented functions for the user to be able to repeat a specific song, repeat the playlist or shuffle all songs.",
+    "detail": "The music player's background color is created with a function that generates random gradient colors. You never know what colors you will get. With this simple design, you can spend more time dancing to your favorite song! You can check out my code on my github.",
+    "link": "https://github.com/tep-y/musicplayer",
+    "image001": "images/projects/musicplayer_001.jpg",
+    "image002": "images/projects/musicplayer_002.mp4",
+    "image003": "images/projects/musicplayer_003.jpg",
+    "image004": "images/projects/musicplayer_004.jpg"
   }
 ]
