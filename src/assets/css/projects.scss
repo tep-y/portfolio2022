@@ -37,22 +37,6 @@ $bdazzledblue: #235789;
   pointer-events: none;
 }
 
-// .sidebar {
-//   width: 4vw;
-//   height: auto;
-//   // border: green solid 1px;
-//   // position: absolute;
-//   // top: 0;
-//   // left: 0;
-//   // transform: translate(-20%, -20%);
-//   // transform: rotate(180deg);
-//   // -webkit-transform: rotate(180deg);
-//   writing-mode: vertical-rl;
-//   -webkit-writing-mode: vertical-rl;
-//   position: sticky;
-//   top: 20px;
-// }
-
 @media all and (max-width: 649px) {
   .projects {
     display: flex;
@@ -66,8 +50,4 @@ $bdazzledblue: #235789;
   .image-container {
     display: none;
   }
-}
-
-@media all and (min-width: 650px) and (max-width: 959px) {
-
 }
