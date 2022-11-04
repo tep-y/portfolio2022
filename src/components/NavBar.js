@@ -25,16 +25,19 @@ const NavBar = () => {
     }
   }
 
-  const sidebarVariants = {
-    initial: {
-      opacity: 1
+  const menuVariants = {
+    hidden: {
+      opacity: 0
     },
-    exit: {
-      opacity: 0,
+    visible: {
+      opacity: 1,
       transition: {
-        ease: 'easeInOut',
-        delay: .3
+        delay: .5,
+        duration: .6
       }
+    },
+    hover: {
+      scale: 1.1
     }
   }
 
@@ -59,21 +62,21 @@ const NavBar = () => {
         Hi! I'm Tep.
       </motion.h3>
       <input className="checkbox" type="checkbox" name="hamburger menu" />
-      <div className="hamburger-lines">
-        <span className="line line1"></span>
+      <motion.div 
+        className="hamburger-lines"
+        variants={menuVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <span className="line line1" ></span>
         <span className="line line2"></span>
         <span className="line line3"></span>
-      </div>
-      <motion.div 
-        className="sidebar-menu"
-        variants={sidebarVariants}
-        initial="initial"
-        exit="exit"
-      >
+      </motion.div>
+      <div className="sidebar-menu">
         <Link to="projects" className="link"><h3>Projects</h3></Link>
         <Link to="aboutme" className="link"><h3>About Me</h3></Link>
         <Link to="contact" className="link"><h3>Contact</h3></Link>
-      </motion.div>
+      </div>
     </nav>
   )
 }
