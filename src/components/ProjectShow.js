@@ -12,55 +12,10 @@ const ProjectShow = () => {
   const title = item.title;
   const capTitle = title.charAt(0).toUpperCase() + title.slice(1);
 
-  const [ ref, inView ] = useInView();
-  const [ ref2, inView2 ] = useInView();
-  const animation = useAnimation();
-  const animation2 = useAnimation();
-
   useEffect(() => {
     window.scrollTo(0, 0)
     document.body.style.backgroundColor = "#F7F7F7";
   }, [])
-
-  useEffect(() => {
-    if(inView) {
-      animation.start({
-        opacity: 1,
-        x: 0,
-        transition: {
-          ease: [0.6, 0.01, -0.05, 0.95],
-          duration: 1.6,
-          delay: 0.6
-        }
-      })
-    }
-    if (!inView) {
-      animation.start({
-        x: '100vw',
-        opacity: 0
-      })
-    }
-  }, [inView]);
-
-  useEffect(() => {
-    if(inView2) {
-      animation2.start({
-        opacity: 1,
-        x: 0,
-        transition: {
-          ease: [0.6, 0.01, -0.05, 0.95],
-          duration: 1.6,
-          delay: 0.3
-        }
-      })
-    }
-    if (!inView2) {
-      animation2.start({
-        x: '-100vw',
-        opacity: 0
-      })
-    }
-  }, [inView2]);
 
   const mainVariants = {
     hidden: {
@@ -83,7 +38,55 @@ const ProjectShow = () => {
         duration: 1.6
       }
     }
-  }
+  };
+
+  const animationVariants = {
+    hidden: {
+      opacity: 0,
+      x: '100vw'
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        ease: [0.6, 0.01, -0.05, 0.95],
+        duration: 1.6,
+        delay: 0.3
+      }
+    },
+    exit: {
+      opacity: 0,
+      y: 100,
+      transition: {
+        ease: [0.6, 0.01, -0.05, 0.95],
+        duration: 1.6
+      }
+    }
+  };
+
+  const animationBottomVariants = {
+    hidden: {
+      opacity: 0,
+      x: '-100vw'
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        ease: [0.6, 0.01, -0.05, 0.95],
+        duration: 1.6,
+        delay: 0.3
+      }
+    },
+    exit: {
+      opacity: 0,
+      y: 100,
+      transition: {
+        ease: [0.6, 0.01, -0.05, 0.95],
+        duration: 1.6
+      }
+    }
+  };
 
   return(
     <>
@@ -106,9 +109,10 @@ const ProjectShow = () => {
       </motion.div>
       <motion.div 
         className='project-middle'
-        ref={ref}
-        animate={animation}
-        exit={{opacity: 0, transition: {delay: 0.8}}}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={animationVariants}
       >
         { !item.image002 ? <></>
         : <>
@@ -132,8 +136,10 @@ const ProjectShow = () => {
       </motion.div>
       <motion.div 
         className='project-last' 
-        ref={ref2} animate={animation2} 
-        exit={{opacity: 0, transition: {delay: 0.8}}}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={animationBottomVariants}
       >
         <div className='project-images'>
           { item.image003 ? (
