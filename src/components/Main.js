@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import Footer from './Footer';
 import NavBar from './NavBar';

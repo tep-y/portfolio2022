@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 @font-face {
   font-family: 'Maragsa';
+  font-display: swap;
   src: url('../fonts/maragsa-display.woff')  format('woff');
 }
 
@@ -47,9 +48,9 @@ body {
   animation: spin 2s linear infinite;
 }
 
-.loader-hide {
-  display: none;
-}
+// .loader-hide {
+//   display: none;
+// }
 
 /* Safari */
 @-webkit-keyframes spin {
@@ -63,11 +64,6 @@ body {
 }
 
 // HEADER
-// .landscape-title {
-//   display: none;
-// }
-
-
 a .home-link {
     color: black;
     font-family: 'Poppins', sans-serif;

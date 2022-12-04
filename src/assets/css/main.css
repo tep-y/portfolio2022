@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 @font-face {
   font-family: 'Maragsa';
+  font-display: swap;
   src: url("../fonts/maragsa-display.woff") format("woff");
 }
 
@@ -40,10 +41,6 @@ body {
   height: 36px;
   -webkit-animation: spin 2s linear infinite;
           animation: spin 2s linear infinite;
-}
-
-.loader-hide {
-  display: none;
 }
 
 /* Safari */
