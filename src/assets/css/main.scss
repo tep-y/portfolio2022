@@ -271,9 +271,14 @@ nav input[type="checkbox"]:checked ~ .back-lines .line3 {
 }
 
 .center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 // FOOTER

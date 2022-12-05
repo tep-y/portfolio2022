@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 import '../assets/css/project.css';
 import elements from '../db.json';
 import BackHome from './BackHome';
@@ -169,7 +168,7 @@ const ProjectShow = () => {
       </motion.div>
       </>
       )
-      : <div style={{textAlign: 'center'}}><h3>No project to see here. Try again :)</h3></div>}
+      : <div className='center'><h3>No project to see here. Try again :)</h3></div>}
       <motion.div 
         className='footer-project'
         variants={mainVariants}

@@ -11,10 +11,12 @@ const ProjectShow = React.lazy(() => import('./ProjectShow'));
 const Contact = React.lazy(() => import('./Contact'));
 const NotFound = React.lazy(() => import('./NotFound'));
 
-const loader = (
-  <div>
-    <div className='loader'></div>
-    <h3 className='center'>loading..</h3>
+const loader = () => (
+  <div className='center'>
+    <div>
+      <div className='loader'></div>
+      <h3>loading..</h3>
+    </div>
   </div>
 );
 
@@ -24,7 +26,7 @@ const App = () => {
   return (
     <>
       <AnimatePresence initial={true} exitBeforeEnter>
-        <React.Suspense fallback={loader}>
+        <React.Suspense fallback={loader()}>
         <Routes location={location} key={location.key}>
           <Route path="/" element={<Main />} />
           <Route path="projects" element={<Projects />} />
