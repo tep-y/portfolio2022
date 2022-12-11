@@ -24,7 +24,7 @@
     "id": 4,
     "title": "freepour",
     "description": "Free Pour was born during my Web Development course. In less than a week, we had to code and build a website about cocktails. This website was created using HTML, CSS/SCSS, JavaScript, Ruby, Heroku, and GitHub.",
-    "link": "https://freepour-cocktails.herokuapp.com/",
+    "link": "https://github.com/tep-y/rails-mister-cocktail",
     "image001": "images/projects/freepour_001.jpg",
     "image002": "images/projects/freepour_002.mp4",
     "image003": "images/projects/freepour_003.jpg",
