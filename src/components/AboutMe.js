@@ -79,8 +79,8 @@ const AboutMe = () => {
         <div className='column'>
           <img src='/images/IMG_0041.jpg' alt='tep yith web developer' />
         </div>
-        <div className='column'><p>Hello! My name is Tep. I am a front-end web developer 
-        with a good eye for design. I love dogs, hockey and doing Sudokus. 
+        <div className='column'><p>Hello! My name is Tep. I am a web designer and web developer. 
+          I love dogs, hockey and doing Sudokus. 
         I am always curious about new and exciting technologies and methods.
         Based in Montréal, Québec, Canada, you can easily find me in a coffee shop coding, designing, and learning new things. 
         <Link to='/contact'> Contact me if you want to learn more.</Link></p>
